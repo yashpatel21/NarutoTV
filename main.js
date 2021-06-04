@@ -1,6 +1,6 @@
 const { app, BrowserWindow } = require('electron');
 
-// app.disableHardwareAcceleration();
+app.disableHardwareAcceleration();
 
 function createWindow() {
 	const mainWindow = new BrowserWindow({
