@@ -2,14 +2,11 @@ let socket = io();
 
 let player = videojs('player', {
 	controls: false,
-	autoplay: true,
+	autoplay: false,
 	loop: true,
 	preload: 'auto',
 	fluid: true,
 });
-
-videojs.Vhs.GOAL_BUFFER_LENGTH = 60;
-videojs.Vhs.MAX_GOAL_BUFFER_LENGTH = 80;
 
 let pos = 0;
 let videos = ['itachi-loop.mp4', 'kakashi-loop.mp4'];
@@ -18,6 +15,8 @@ player.src({
 	type: 'video/mp4',
 	src: '/assets/' + videos[pos],
 });
+
+player.play();
 
 function cycleVideo() {
 	pos++;
@@ -29,6 +28,7 @@ function cycleVideo() {
 		type: 'video/mp4',
 		src: './assets/' + videos[pos],
 	});
+	player.play();
 }
 
 socket.on('cycle', function () {
