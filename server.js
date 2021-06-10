@@ -1,4 +1,5 @@
 const express = require('express');
+const localtunnel = require('localtunnel');
 const path = require('path');
 const http = require('http');
 const { Server } = require('socket.io');
@@ -23,4 +24,16 @@ io.on('connection', (socket) => {
 
 server.listen(port, () => {
 	console.log(`Example app listening at http://localhost:${port}`);
+
+	(async () => {
+		const tunnel = await localtunnel({ port: 3000, subdomain: 'narutotv1337' });
+
+		// the assigned public url for your tunnel
+		// i.e. https://abcdefgjhij.localtunnel.me
+		console.log(`created a new localtunnel at ${tunnel.url}`);
+
+		tunnel.on('close', () => {
+			// tunnels are closed
+		});
+	})();
 });

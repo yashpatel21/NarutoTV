@@ -17,6 +17,6 @@
 	"devDependencies": {
 		"concurrently": "^6.2.0",
 		"electron": "^13.0.1",
-		"json-server": "^0.16.3"
+		"localtunnel": "^2.0.1"
 	}
 }
