@@ -4,10 +4,10 @@ const { app, BrowserWindow } = require('electron');
 
 function createWindow() {
 	const mainWindow = new BrowserWindow({
-		width: 1920,
-		height: 1080,
 		fullscreen: true,
 		autoHideMenuBar: true,
+		kiosk: true,
+		alwaysOnTop: true,
 	});
 
 	mainWindow.loadURL('http://localhost:3000');
