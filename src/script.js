@@ -9,7 +9,7 @@ let player = videojs('player', {
 });
 
 let pos = 0;
-let videos = ['itachi-loop.mp4', 'kakashi-loop.mp4'];
+let videos = ['kakashi-loop.mp4', 'itachi-loop.mp4'];
 
 player.src({
 	type: 'video/mp4',
