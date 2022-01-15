@@ -5,4 +5,5 @@ body::-webkit-scrollbar {
 html,
 body {
 	margin: 0;
+	cursor: none;
 }
