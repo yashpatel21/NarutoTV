@@ -8,8 +8,8 @@ let player = videojs('player', {
 	fluid: true,
 });
 
-player.vhs.options_.externHls.GOAL_BUFFER_LENGTH = 60;
-player.vhs.options_.externHls.MAX_GOAL_BUFFER_LENGTH = 80;
+videojs.Vhs.GOAL_BUFFER_LENGTH = 60;
+videojs.Vhs.MAX_GOAL_BUFFER_LENGTH = 80;
 
 let pos = 0;
 let videos = ['kakashi-loop.mp4', 'itachi-loop.mp4'];
