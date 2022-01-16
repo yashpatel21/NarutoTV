@@ -7,9 +7,13 @@ function createWindow() {
 		autoHideMenuBar: true,
 		kiosk: true,
 		alwaysOnTop: true,
+		webPreferences: {
+			webSecurity: false,
+		},
 	});
 
-	mainWindow.loadURL('http://localhost:3000');
+	// mainWindow.loadURL('http://localhost:3000');
+	mainWindow.loadFile('./src/index.html');
 }
 
 app.whenReady().then(() => {
