@@ -16,7 +16,7 @@ let videos = ['kakashi-loop.mp4', 'itachi-loop.mp4'];
 
 player.src({
 	type: 'video/mp4',
-	src: 'file:///src/assets/' + videos[pos],
+	src: 'file:///home/pi/NarutoTV/src/assets/' + videos[pos],
 });
 
 player.play();
@@ -29,7 +29,7 @@ function cycleVideo() {
 
 	player.src({
 		type: 'video/mp4',
-		src: 'file:///src/assets/' + videos[pos],
+		src: 'file:///home/pi/NarutoTV/src/assets/' + videos[pos],
 	});
 	player.play();
 }
